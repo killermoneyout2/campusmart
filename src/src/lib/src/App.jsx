@@ -61,4 +61,18 @@ function Nav({ page, setPage, session }) {
           <button key={n.key} onClick={() => setPage(n.key)} style={{
             background: page===n.key ? '#D4A017' : 'transparent',
             color:'#fff', border:'none', padding:'6px 14px', borderRadius:8,
-            fontFamily:"'Syne',sans-serif", fontWeight:600, fontSize:13
+            fontFamily:"'Syne',sans-serif", fontWeight:600, fontSize:13, cursor:'pointer'
+          }}>{n.label}</button>
+        ))}
+      </div>
+      <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+        <span style={{ fontSize:12, color:'#a08060' }}>{session.user.email}</span>
+        <button onClick={signOut} style={{
+          background:'transparent', color:'#a08060', border:'1px solid #3a2810',
+          padding:'5px 12px', borderRadius:8, fontFamily:"'Syne',sans-serif",
+          fontSize:12, cursor:'pointer'
+        }}>Sign out</button>
+      </div>
+    </header>
+  )
+}

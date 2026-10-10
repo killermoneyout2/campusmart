@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '../lib/supabase'
+import StudioCredit from '../components/StudioCredit'
 
 export default function AuthPage() {
   const [mode, setMode]       = useState('login')
@@ -28,7 +29,7 @@ export default function AuthPage() {
   return (
     <div style={{
       minHeight:'100vh', background:'#1a1208',
-      display:'flex', alignItems:'center', justifyContent:'center',
+      display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',
       fontFamily:"'Lora',serif", padding:20
     }}>
       <style>{`
@@ -91,6 +92,7 @@ export default function AuthPage() {
           Use your school email to join 🏫
         </div>
       </div>
+      <StudioCredit dark />
     </div>
   )
 }

@@ -4,6 +4,7 @@ import AuthPage from './pages/AuthPage'
 import MarketplacePage from './pages/MarketplacePage'
 import MessagesPage from './pages/MessagesPage'
 import MyListingsPage from './pages/MyListingsPage'
+import StudioCredit from './components/StudioCredit'
 
 export default function App() {
   const [session, setSession] = useState(null)
@@ -51,6 +52,7 @@ export default function App() {
       {page === 'market'     && <MarketplacePage session={session} />}
       {page === 'messages'   && <MessagesPage   session={session} />}
       {page === 'mylistings' && <MyListingsPage  session={session} />}
+      <StudioCredit />
       {/* Bottom nav — mobile */}
       <MobileNav page={page} setPage={setPage} unreadCount={unreadCount} />
     </div>

@@ -1,10 +1,10 @@
-// Every Mezuvi venture links back to the studio hub.
+// Every TTR Foundry product links back to the studio hub.
 export default function StudioCredit({ dark = false }) {
   return (
     <div style={{ textAlign:'center', padding:'18px 0', fontSize:12, fontFamily:"'Lora',serif" }}>
-      <a href="https://mezuvi.com" target="_blank" rel="noopener"
+      <a href="https://ttrfoundry.com" target="_blank" rel="noopener"
         style={{ color: dark ? '#a08060' : '#9a8a74', textDecoration:'none' }}>
-        A Mezuvi company
+        A TTR Foundry company
       </a>
     </div>
   )
